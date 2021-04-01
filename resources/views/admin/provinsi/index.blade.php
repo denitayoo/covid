@@ -19,13 +19,12 @@
                     @endif
 
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" id="table">
                             <thead>
-                                <tr>
-                                    <th>Nomor</th>
+                            <th>Nomor</th>
                                     <th>Kode Provinsi</th>
                                     <th>Nama Provinsi</th>
-                                    <th colspan="3"><center>Aksi</center></th>
+                                    <th>aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,11 +42,9 @@
                                             @csrf
                                             @method('DELETE')
                                             <a href="{{route('provinsi.show',$data->id)}}" class="btn btn-info">Show</a>
-                                        </td>
-                                        <td>
+                               
                                             <a href="{{route('provinsi.edit',$data->id)}}" class="btn btn-success">Edit</a>
-                                        </td>
-                                        <td>
+                                      
                                             <button type="submit" onclick="return confirm('Apakah anda yakin?');" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>

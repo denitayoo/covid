@@ -12,7 +12,7 @@
                 <form action="{{route('rw.store')}}" method="POST">
                    @csrf
                         <div class="form-group">
-                        <label>Nama Rw</label>
+                        <label>Rw</label>
                         <input type="text" name="nama_rw" class="form-control" required>
                       
                         </div>

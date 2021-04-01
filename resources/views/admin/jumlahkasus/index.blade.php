@@ -9,13 +9,9 @@
                     <a href="{{route('jumlahkasus.create')}}" class="btn btn-primary float-right"> Tambah Data</a>
                 </div>
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                  
                     <div class="table-responsive">
-                        <table class="table">
+                    <table class="table" id="table">
                             <thead>
                                 <tr>
                                         <thead>

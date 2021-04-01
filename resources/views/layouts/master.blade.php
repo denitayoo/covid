@@ -32,7 +32,24 @@
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{asset('assets/css/argon.css?v=1.2.0" type="text/css')}}">
-  @livewireScripts
+  @yield('style')
+  @livewireStyles
+    {{-- DataTable --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}"/>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+    </script>
 </head>
 
 <body>
@@ -68,7 +85,16 @@
   <script src="{{asset('assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
-  @livewireScripts 
+  @yield('scripts')
+    @livewireScripts
+    {{-- DataTable --}}
+    <script src="{{asset('assets/DataTables/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{asset('assets/DataTables/datatables.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+        });
+    </script>
 </body>
 
 </html>
