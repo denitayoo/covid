@@ -34,6 +34,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  {{-- DataTable --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/DataTables/datatables.min.css') }}" />
 </head>
 
 <body>
@@ -172,31 +174,29 @@
         <section id="kasusdunia" class="kasusdunia"><center>
           <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
           <div class="card-body">
-            <div style="height:600px;overflow:auto;margin-right:15px;">
-            <table class="table table-striped">
-                     <div class="card-body" >
-                     <thead>
-                                            <tr>
-                                                <th>NO.</th>
-                                                <th>NEGARA</th>
-                                                <th>POSITIF</th>
-                                                <th>SEMBUH</th>
-                                                <th>MENINGGAL</th>
-                                            </tr>
-                                        </thead>
-                                       <tbody>
-                                            @php
-                                            $no = 1;
-                                          @endphp
-                                            @foreach($dunia as $data)
-                                                <tr>     
-                                                  <th> {{$no++ }}</th>
-                                                  <th> <?php echo $data['attributes']['Country_Region'] ?> </th>
-                                                  <th> <?php echo number_format($data['attributes']['Confirmed']) ?> </th>
-                                                  <th> <?php echo number_format($data['attributes']['Recovered'])?> </th>
-                                                  <th> <?php echo number_format($data['attributes']['Deaths'])?> </th>
-                                                </tr>
-                                              @endforeach
+           
+            <table class="table" id="global">
+                                <thead>
+                                    <tr>
+
+                                        <th>No</th>
+                                        <th>Negara</th>
+                                        <th>Positif</th>
+                                        <th>Sembuh</th>
+                                        <th>Meninggal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php $no=1; @endphp
+                                    @foreach ($dunia as $data => $val)
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $val['attributes']['Country_Region'] }}</td>
+                                            <td>{{ $val['attributes']['Confirmed'] }}</td>
+                                            <td>{{ $val['attributes']['Recovered'] }}</td>
+                                            <td>{{ $val['attributes']['Deaths'] }}</td>
+                                        </tr>
+                                    @endforeach
                                  </tbody>
                                  </table>
                                 
@@ -207,17 +207,11 @@
 
 <div class="card-header ">
 &nbsp;
-  <section class="showcase">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-1"></div>
-      <div class="col-lg-10">
-        <div class="card">
-        <section id="kasusindonesia" class="kasusindonesia"><center>
-          <div class="card-header">Data Kasus Corona Virus Berdasarkan Provinsi</div></center>
+<section id="kasusdunia" class="kasusdunia"><center>
+          <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
           <div class="card-body">
-            <div style="height:600px;overflow:auto;margin-right:15px;">
-            <table class="table table-striped">
+           
+            <table class="table" id="dunia">
               <thead>
                 <th>No</th>
                 <th>Provinsi</th>
@@ -383,7 +377,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets2/js/main.js"></script>
+  {{-- DataTable --}}
+    <script src="{{ asset('assets/DataTables/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('assets/DataTables/datatables.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+        });
+        $(document).ready(function() {
+            $('#global').DataTable();
+        });
 
+    </script>
 </body>
 
 </html>
