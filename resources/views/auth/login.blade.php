@@ -51,11 +51,7 @@
         </div>
         <ul class="navbar-nav mr-auto">
      
-          <li class="nav-item">
-            <a href="{{url('register')}}" class="nav-link">
-              <span class="nav-link-inner--text">Register</span>
-            </a>
-          </li>
+         
         </ul>
        
       </div>
