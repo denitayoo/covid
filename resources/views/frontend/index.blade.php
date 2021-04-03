@@ -207,7 +207,7 @@
 
 <div class="card-header ">
 &nbsp;
-<section id="kasusdunia" class="kasusdunia"><center>
+<section id="kasusindonesia" class="kasusindonesia"><center>
           <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
           <div class="card-body">
            
