@@ -41,13 +41,13 @@
             <li class="nav-item">
               <a class="nav-link" href="../admin/kelurahan">
                 <i class="ni ni-pin-3 text-default"></i>
-                <span class="nav-link-text">Kelurahan</span>
+                <span class="nav-link-text">Desa</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../admin/rw">
                 <i class="ni ni-pin-3 text-green"></i>
-                <span class="nav-link-text">RW</span>
+                <span class="nav-link-text">Rukun Warga</span>
               </a>
             </li>
             <li class="nav-item">

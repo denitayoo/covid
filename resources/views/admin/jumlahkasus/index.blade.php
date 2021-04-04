@@ -35,7 +35,7 @@
                                             <td>Provinsi : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}<br>
                                             Kota / Kabupaten : {{$data->rw->kelurahan->kecamatan->kota->nama_kota}}<br>
                                             Kecamatan : {{$data->rw->kelurahan->kecamatan->nama_kecamatan}}<br>
-                                            Kota / Desa : {{$data->rw->kelurahan->nama_kelurahan}}</td>
+                                            Desa : {{$data->rw->kelurahan->nama_kelurahan}}</td>
                                             <td>{{$data->rw->nama_rw}}</td>
                                             <td>{{$data->reaktif}}</td>
                                             <td>{{$data->jumlah_positif}}</td>

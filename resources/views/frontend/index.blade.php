@@ -53,7 +53,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{url('/frontend')}}">Home</a></h1>
+      <h1 class="logo mr-auto"><a href="{{url('/')}}">Home</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets2/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -83,7 +83,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <h1 >Welcome to Kawal Covid</h1>
-      <h2 >Kita Berjuang Bersama Melawan Corona | Sasageyooo!</h2>
+      <h2 >Kita Berjuang Bersama Melawan Corona!</h2>
     </div>
   </section><!-- End Hero -->
 
@@ -203,22 +203,27 @@
                                
                      </div>
                    </div>
-                <br>   
+        
 
-<div class="card-header ">
+
 &nbsp;
+
+        <div class="card">
 <section id="kasusindonesia" class="kasusindonesia"><center>
-          <div class="card-header">Data Kasus Corona Virus Berdasarkan Negara</div></center>
+          <div class="card-header">Data Kasus Corona Virus Berdasarkan provinsi</div></center>
           <div class="card-body">
            
-            <table class="table" id="dunia">
+            <table class="table" id="table">
               <thead>
+              <tr>
                 <th>No</th>
                 <th>Provinsi</th>
                 <th>Positif</th>
                 <th>Sembuh</th>
                 <th>Meninggal</th>
+                </tr>
               </thead>
+              
               <tbody>
               @php $no=1; @endphp
                                             @foreach($tampil as $tmp)
@@ -390,7 +395,6 @@
         $(document).ready(function() {
             $('#global').DataTable();
         });
-
     </script>
 </body>
 

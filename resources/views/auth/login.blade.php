@@ -15,7 +15,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>Kawal Covid</title>
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets3/favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{asset('assets3/favicon/apple-icon-60x60.png')}}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets3/favicon/apple-icon-72x72.png')}}">
@@ -101,7 +101,7 @@
             <div class="card text-white bg-secondary py-5 d-md-down-none" style="width:44%; bg-color:#3c4b6424;">
               <div class="card-body text-center">
                 <div>
-                    <img src="{{asset('assets3/covid.png')}}" style="width:300px; height:300px;" alt="">
+                    <img src="{{asset('assets3/vd.png')}}" style="width250px; height:250px;" alt="">
                 </div>
               </div>
             </div>
