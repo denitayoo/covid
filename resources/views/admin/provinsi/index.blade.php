@@ -30,9 +30,7 @@
                             <tbody>
                                 @php $no=1; @endphp
                                 @foreach ($provinsi as $data)
-                                <form action="{{route('provinsi.destroy',$data->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
+                         
                                     <tr>
                                         <td>{{$no++}}</td>
                                         <td>{{$data->kode_provinsi}}</td>

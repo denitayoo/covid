@@ -26,9 +26,7 @@
                             <tbody>
                                 @php $no=1; @endphp
                                 @foreach ($kota as $data)
-                                <form action="{{route('kota.destroy',$data->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
+                            
                                     <tr>
                                         <td>{{$no++}}</td>
                                         <td>{{$data->kode_kota}}</td>
